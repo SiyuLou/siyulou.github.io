@@ -1,0 +1,153 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f8f9fa;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+header {
+  background: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+/* Navigation Container */
+.nav-container {
+  max-width: 800px; /* Aligns the navigation bar with the main content's width */
+  margin: 0 auto; /* Centers the navigation bar horizontally */
+  display: flex; /* Aligns the title and links */
+  justify-content: space-between; /* Pushes title to left and links to the right */
+  padding: 1rem 1rem 0; /* Adds padding above and to the sides */
+}
+
+/* Navigation Links */
+nav {
+  display: flex;
+  gap: 1rem; /* Adds space between navigation links */
+}
+
+nav a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #007bff;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.current {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+/* Main Content Alignment */
+.container {
+  max-width: 800px; /* Matches the width of the navigation bar */
+  margin: 0 auto; /* Centers the main content horizontally */
+  padding: 2rem 1rem; /* Adds padding for better readability */
+}
+
+h2 {
+  padding-bottom: 0.5rem;
+}
+
+/* Publications Section */
+.publication {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+.publication:last-child {
+  border-bottom: none;
+}
+.publication-img {
+  flex-shrink: 0;
+  width: 150px; /* Fixed width */
+  height: auto; /* Keep aspect ratio */
+  max-height: 120px; /* Prevent the image from being too tall */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: contain; /* Ensure the full image is visible */
+  background-color: #f0f0f0; /* Add a background color for padding space */
+}
+.publication-info {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+}
+footer a {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .publication {
+    flex-direction: column;
+    text-align: center;
+  }
+  .publication-img {
+    margin-bottom: 1rem;
+  }
+}
+
+emt {
+  display: inline; /* Ensures the line only appears under the text */
+  border-bottom: 1.5px solid #000; /* Adds the line under the text */
+}
+
+
+/* About Section */
+.about-content {
+  display: flex; /* Align the profile picture and text side by side */
+  align-items: center; /* Vertically align the content */
+  gap: 2rem; /* Add space between the image and the text */
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 150px; /* Set the width of the picture */
+  height: 150px; /* Ensure the height matches the width for a perfect circle */
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image fits inside the circle without distortion */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the image */
+}
+
+/* Text Content */
+.text-content {
+  flex: 1; /* Allow the text content to take up remaining space */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .about-content {
+    flex-direction: column; /* Stack the image and text vertically */
+    text-align: center; /* Center-align the text for smaller screens */
+  }
+
+  .profile-pic {
+    margin-bottom: 1rem; /* Add space below the image */
+  }
+}
